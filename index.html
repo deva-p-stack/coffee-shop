@@ -1,0 +1,724 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instant cafe</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./public/css/all.min.css">
+    <link rel="shortcut icon" href="./public/images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+  
+   <header class="sticky top-0 z-50">
+      <input type="checkbox" id="Toggle" class="hidden peer" /> 
+      <nav class="flex items-center justify-between p-4 text-dark-200  bg-[#49332f]">
+        <!-- logo -->
+        <div class="font-bold uppercase sm:ml-20 flex justify-center items-center text-[#E5E7EB]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="25" height="25" viewBox="0 0 24 24"><!-- Icon from Material Line Icons by Vjacheslav Trushkin - https://github.com/cyberalien/line-md/blob/master/license.txt --><path fill="currentColor" fill-opacity="0" d="M17 14v4c0 1.66 -1.34 3 -3 3h-6c-1.66 0 -3 -1.34 -3 -3v-4Z"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.15s" values="0;0.3"/></path><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="48" stroke-dashoffset="48" d="M17 9v9c0 1.66 -1.34 3 -3 3h-6c-1.66 0 -3 -1.34 -3 -3v-9Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="48;0"/></path><path stroke-dasharray="14" stroke-dashoffset="14" d="M17 9h3c0.55 0 1 0.45 1 1v3c0 0.55 -0.45 1 -1 1h-3"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="14;0"/></path><mask id="SVGnGEayvOG"><path stroke="#fff" d="M8 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4M12 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4M16 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4"><animateMotion calcMode="linear" dur="3s" path="M0 0v-8" repeatCount="indefinite"/></path></mask><rect width="24" height="0" y="7" fill="currentColor" mask="url(#SVGnGEayvOG)"><animate fill="freeze" attributeName="y" begin="0.8s" dur="0.6s" values="7;2"/><animate fill="freeze" attributeName="height" begin="0.8s" dur="0.6s" values="0;5"/></rect></g></svg>
+          Instant cafe 
+        </div>
+
+         
+          <label for="Toggle" class="cursor-pointer md:hidden text-[#E5E7EB]"> 
+        <svg xmlns="http://www.w3.org/2000/svg"  width="32" height="32" viewBox="0 0 16 16"><!-- Icon from Gitlab SVGs by GitLab B.V. - https://gitlab.com/gitlab-org/gitlab-svgs/-/blob/main/LICENSE --><path fill="currentColor" fill-rule="evenodd" d="M0 3.75A.75.75 0 0 1 .75 3h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 3.75M0 8a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 8m.75 3.5a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5z" clip-rule="evenodd"/></svg>
+          </label>
+          
+         
+        <!-- nav link and nav items -->
+        <ul class="hidden gap-6 mr-20 md:flex text-md">
+          <li>
+            <a
+              href="#home"
+              class="text-[#E5E7EB] font-semibold no-underline transition-colors duration-300 hover:text-[#38BDF8]"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="text-[#E5E7EB] font-semibold no-underline transition-colors duration-300 hover:text-[#38BDF8]"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#menu"
+              class="text-[#E5E7EB] font-semibold no-underline transition-colors duration-300 hover:text-[#38BDF8]"
+              >Menu </a
+            >
+          </li>
+          <li>
+            <a
+              href="#cus"
+              class="text-[#E5E7EB] font-semibold no-underline transition-colors duration-300 hover:text-[#38BDF8]"
+              >Review</a
+            >
+          </li>
+        </ul>
+      
+      </nav>
+  <!-- mobile view -->
+  <div class="flex flex-wrap hidden  bg-[#313030] peer-checked:block md:hidden">
+  <ul class="flex flex-col w-full gap-4 p-4 text-center text-md">
+    <li><a href="#home" class="text-[#E5E7EB] hover:text-[#38BDF8]">Home</a></li>
+    <li><a href="#about" class="text-[#E5E7EB] hover:text-[#38BDF8]">About</a></li>
+    <li><a href="#skills" class="text-[#E5E7EB] hover:text-[#38BDF8]">Menu</a></li>
+    <li><a href="#project" class="text-[#E5E7EB] hover:text-[#38BDF8]">Contact </a></li>
+  </ul>
+</div>
+    </header>
+
+
+<!-- hero section start below  bg-[#F9FAFB]  text-[#111827]-->
+ 
+<section id="home" class="  bg-gradient-to-br from-[#fff8e7d5] via-[#fde0a9] to-[#e0ad76] flex flex-col items-center justify-center min-h-screen max-w-8xl item-center ">
+
+
+  
+<h3 class="text-[#3E2723] lg:text-7xl px-4 py-5 font-bold text-3xl md:text-5xl ">Fresh Coffee, New Energy</h3>  
+<p class="px-6 py-3 text-2xl lg:text-4xl md:text-4xl text-[#3E2723] font-semibold">Every Cup Tells a own Story 💙✨</p>
+
+
+<div class="flex flex-col items-center justify-center gap-6 mt-5 lg:flex-row md:flex-row">
+  
+  <button type="button" class="px-6 py-3 bg-[#D2691E] text-white text-lg flex items-center  font-semibold  justify-center gap-2 rounded-2xl hover:-translate-y-0.5 hover:shadow  transition-all duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24"><path fill="#fff" d="M21 5c-1.11-.35-2.33-.5-3.5-.5c-1.95 0-4.05.4-5.5 1.5c-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5c.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5c1.35-.85 3.8-1.5 5.5-1.5c1.65 0 3.35.3 4.75 1.05c.1.05.15.05.25.05c.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1M3 18.5V7c1.1-.35 2.3-.5 3.5-.5c1.34 0 3.13.41 4.5.99v11.5C9.63 18.41 7.84 18 6.5 18c-1.2 0-2.4.15-3.5.5m18 0c-1.1-.35-2.3-.5-3.5-.5c-1.34 0-3.13.41-4.5.99V7.49c1.37-.59 3.16-.99 4.5-.99c1.2 0 2.4.15 3.5.5z"/><path fill="currentColor" d="M11 7.49c-1.37-.58-3.16-.99-4.5-.99c-1.2 0-2.4.15-3.5.5v11.5c1.1-.35 2.3-.5 3.5-.5c1.34 0 3.13.41 4.5.99z" opacity=".3"/><path fill="currentColor" d="M17.5 10.5c.88 0 1.73.09 2.5.26V9.24c-.79-.15-1.64-.24-2.5-.24c-1.28 0-2.46.16-3.5.47v1.57c.99-.35 2.18-.54 3.5-.54m0 2.66c.88 0 1.73.09 2.5.26V11.9c-.79-.15-1.64-.24-2.5-.24c-1.28 0-2.46.16-3.5.47v1.57c.99-.34 2.18-.54 3.5-.54m0 2.67c.88 0 1.73.09 2.5.26v-1.52c-.79-.15-1.64-.24-2.5-.24c-1.28 0-2.46.16-3.5.47v1.57c.99-.35 2.18-.54 3.5-.54"/></svg>
+    Explore Menu </button>
+
+    <button type="button" class=" flex items-center justify-center px-6 py-3 gap-1 bg-[#D2691E] text-white text-lg font-semibold   rounded-2xl outline-none hover:-translate-y-0.5 hover:shadow  transition-all duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24"><path fill="#fff" d="M12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7m0 2a5 5 0 0 0-5 5c0 1 0 3 5 9.71C17 12 17 10 17 9a5 5 0 0 0-5-5"/></svg>
+      Location </button>
+ 
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</section>
+
+
+
+
+
+
+<!-- menu section -->
+
+<section id="menu" class="min-h-screen max-w-8xl bg-[#F3E8D5] text-[#111827] scroll-mt-12" >
+
+<h1 class="px-4 py-5 text-4xl font-semibold text-center">Our Favorites</h1>
+<p class="px-4 pb-4 text-2xl font-medium text-center">Hot Coffee</p>
+
+<!-- gird layout parent div below  hot coffee-->
+<div class="grid grid-cols-1 gap-6 px-4 py-5 sm:px-6 md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:px-20 place-items-center ">
+
+ 
+
+
+   <!-- card -2 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/blonde.webp" alt="blonde_image" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Blonde Roast Coffee</h3>
+    <p class="py-2 text-base text-center">Blonde roast coffee is the lightest roast of coffee beans, coffee blends mostly use Arabica beans</p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 139.13</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-2 end div above  -->
+
+
+    <!-- card -2 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/medium.jpg" alt="medium_image" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Medium Roast Coffee</h3>
+    <p class="py-2 text-base text-center">Medium roast coffee are known for their balanced flavor profile. They typically have a smooth body</p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 240</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-2 end div above  -->
+
+
+    <!-- card -3 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/dark1.jpg" alt="dark_image" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Dark Roast coffee</h3>
+    <p class="py-2 text-base text-center">Dark roast coffee is characterized by its deep, rich flavor and dark appearance</p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 350</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-3 end div above  -->
+
+
+     <!-- card -5 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/mac.jpg" alt="Macchiato_image" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Macchiato</h3>
+    <p class="py-2 text-base text-center">A macchiato is simply two shots of espresso with a small amount of foamed milk added on top.</p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 250</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-5 end div above  -->
+
+
+
+
+
+
+
+     <!-- card -5 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/caramel.png" alt="caramel macchiato" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Caramel Macchiato</h3>
+    <p class="py-2 text-base text-center">A coffee drink made with espresso, steamed milk, vanilla syrup, and topped with caramel</p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 330</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-5 end div above  -->
+  
+
+ <!-- card -5 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/expresso.jpg" alt="Expresso Macchiato" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Expresso Macchiato</h3>
+    <p class="py-2 text-base text-center">A coffee drink made by adding a small amount of milk foam over an Espresso shot.</p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 380</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-5 end div above  -->
+
+
+   
+ <!-- card -5 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/caffe-mocha.jpg" alt="Caffe_image" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Caffe Mocha</h3>
+    <p class="py-2 text-base text-center">A coffee it is prepared with a 1 to 3 ratio of Espresso to Milk, a small amount of microform on the top.</p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 240</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-5 end div above  -->
+
+
+
+
+   
+ <!-- card -5 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/mocha wf.jpg" alt="Caffe_image" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">White Chocolate Mocha</h3>
+    <p class="py-2 text-base text-center">A cortado is a Spanish beverage, steamed milk, white chocolate syrup, topped with whipped cream</p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 280</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-5 end div above  -->
+
+   
+   
+ <!-- card -5 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/pepper-1.jpg" alt="peppermit_image" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Peppermint Mocha</h3>
+    <p class="py-2 text-base text-center">A  drink made with espresso, white chocolate, peppermint syrup, milk, topped with cream</p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 300</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-5 end div above  -->
+
+  
+
+
+
+   
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  
+
+
+
+<!-- gird end div below -->
+</div>
+
+
+
+<!-- gird layout parent div below for soft coffeee -->
+<div class="grid grid-cols-1 gap-6 px-4 py-5 sm:px-6 md:grid-cols-2 md:px-12 lg:grid-cols-3 lg:px-20 place-items-center ">
+
+
+
+
+<!-- card -5 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/cin.jpg" alt="Cinnamon Latte_image" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Cinnamon Dolce Latte</h3>
+    <p class="py-2 text-base text-center">A coffee combines espresso, steamed milk, and cinnamon dolce syrup, topped with cream.</p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 320</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-5 end div above  -->
+
+
+
+<!-- card -5 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/Eggnong.jpg" alt="Eggnog Latte_image" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Eggnog Latte</h3>
+    <p class="py-2 text-base text-center">A drink made by combining espresso with steamed eggnog, often topped with whipped cream </p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 290</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-5 end div above  -->
+
+
+
+
+
+
+
+<!-- card -5 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/hotsgar copy.jpg" alt="sugar Latte_image" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Sugar Cookie Latte</h3>
+    <p class="py-2 text-base text-center">A coffee drink that combines espresso with a sweet, buttery syrup the flavor of sugar cookies. </p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 330</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-5 end div above  -->
+
+
+
+
+<!-- card -5 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/cap.jpg" alt="Cappuccino_image" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Cappuccino</h3>
+    <p class="py-2 text-base text-center">A Cappuccino is an espresso-based coffee drink prepared with steamed milk, layer of milk foam </p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 250</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-5 end div above  -->
+
+
+
+
+
+
+<!-- card -5 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/corta.jpg" alt="Cortado_image" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Cortado</h3>
+    <p class="py-2 text-base text-center">A cortado is a Spanish beverage, steamed milk, white chocolate syrup, topped with whipped cream</p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 200</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-5 end div above  -->
+
+
+  
+
+
+<!-- card -5 -->
+  <div class=" text-[#111827] border rounded-lg max-w-xs border-gray-300 shadow-lg p-3">
+    <div class="flex items-center justify-center p-3 pb-0 overflow-hidden">
+      <img src="./public/images/pecan.jpg" alt="Cortado_image" class="object-cover transition-transform duration-500 bg-cover rounded-full h-35 w-35 hover:scale-105">
+    </div>
+    <!-- card title text  -->
+    <div  class="px-6 pt-2 bg-[#F3E8D5]">
+      <h3 class="text-xl font-normal text-center ">Pecan Oatmilk Cortado</h3>
+    <p class="py-2 text-base text-center">The Pecan Oatmilk Cortado is a milky espresso drink sweetened with pecan syrup.</p>
+  </div>
+    <!-- price and buy now button -->
+    <div class="flex items-center justify-between px-6 spac-y-2 py-2 bg-[#F3E8D5]">
+    <p class="font-medium text-md">₹ 245</p>
+    <button type="button" class=" rounded-4xl text-white px-6 py-2  bg-[#0EA05C] hover:bg-[#198754] hover:hover:text-gray-100 duration-300 transition-colors ">Buy Now </button>
+    
+    </div>
+  </div>
+   <!-- card-5 end div above  -->
+
+ 
+
+
+
+     
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+  
+
+
+  <!-- end grid soft drinks below -->
+</div>  
+</section>
+
+
+
+
+
+<!--  about section -->
+
+<section id="about" class="min-h-[80vh]  bg-[#F3E8D5] scroll-mt-20">
+
+    <div class="mx-auto max-w-8xl">
+      <h3 class="p-5 text-5xl font-semibold text-center ">about us</h3>
+      <div  class="flex flex-col px-4 py-4 sm:px-6 md:px-10 lg:px-30 lg:flex-row md:flex-row">
+    
+    <!-- left side content started here  -->
+            <div class="flex overflow-hidden">
+                <img src="./public/images/shop_image.jpg" alt="shop image" class="w-full h-full">
+            </div>
+
+        <!-- right side content start here!!! -->
+      <div class="flex flex-col items-center justify-center p-5  bg-[#FFF7EC]">
+        <h3 class="text-2xl font-semibold">Instant Cafe</h3>
+      <p class="p-5 text-lg leading-7 ">
+        This coffee business was started in 1925 by my grandfather. 
+        Later, my father taken over and continued this instant coffee business.
+        I am currently the third generation managing this coffee business, maintaining the  legacy and delivery quality coffee. 
+        Our first priority is customer satisfaction.<br>This instant coffee has adapted to the modern world by accepting
+        online payments such as <a href="https://pay.google.com/about/pay-online/" class="text-[#552cc7]" target="_blank">GPay</a>  and other UPI methods. We also accept all debit and credit cards, and online orders are available on Zomato and Swiggy.
+      </p>  
+      </div>
+
+    <!-- gird end below -->
+  </div>
+<!-- outerdiv end below -->
+    </div>
+ 
+
+
+    
+
+
+</section>
+
+
+
+<!-- customer reviews -->
+
+
+<section id="cus" class="min-h-screen max-w-8xl  bg-[#F3E8D5] scroll-mt-10 py-4 "> 
+  <h3 class="p-8 text-5xl font-semibold text-center "> Customer Reviews </h3>
+<!-- grid outer div start below -->
+
+<div class="grid grid-cols-1 gap-6 px-5 lg:grid-cols-3 md:grid-cols-2 lg:px-24 md:px-15">
+
+<!-- card-1 -->
+<div class="bg-[#FFF7EC] text-sm rounded-lg p-5 shadow-lg ">
+  
+  <!-- image  -->
+  <div class="flex items-center justify-center">
+    <img src="./public/images/pr.png" alt="profile-1_cs" class="p-5 rounded-full w-50 h-50 ">
+  </div>
+  <p class="px-5 text-base leading-relaxed text-gray-700">It's a very cosy and small shop. Service staff are very polite and caring. All food items in the shop are very tasty and good.Still I would recommend veg snacks than non veg. Blueberry muffin ,corn spinach   sandvich .</p>
+  <div class="">
+    <p class="font-semibold text-gray-800 text-md text-end">- Sakthi 💙✨</p>
+  </div>
+    
+  <!-- card -1 end div below -->
+</div>
+
+<!-- card-2 -->
+<div class="p-5 text-sm rounded-lg bg-[#FFF7EC]  ">
+  
+ <!-- image  -->
+  <div class="flex items-center justify-center">
+    <img src="./public/images/shetty.jpg" alt="profile-1_cs" class="p-5 rounded-full w-50 h-50 ">
+  </div>
+
+<p class="px-5 text-base leading-relaxed text-gray-700">The way they treated me is little bit embarrassment. As they had gone good with other customers. I'm not sure why it happened. But except the environment was good and taste was mind blowing equal to price. 🙏</p>
+<div class="font-semibold text-gray-800 text-md text-end">
+<p>- Trisha 🤍✨</p>
+  
+</div>
+  <!-- card-2 end below -->
+</div>
+
+
+<!-- card-3 -->
+<div class="text-sm rounded-lg bg-[#FFF7EC] p-5">
+
+   <!-- image  -->
+  <div class="flex items-center justify-center">
+    <img src="./public/images/abr.webp" alt="profile-1_cs" class="p-5 rounded-full w-50 h-50 ">
+  </div>
+<p class="px-5 text-base leading-relaxed text-gray-700">this is a perfect place to hangout. Has both outdoor and indoor seating. Place is very cleanly maintained. The staffs are extremely friendly and cheerful. You can work here at peace with infinite coffee supply.</p>
+<p class="font-semibold text-gray-800 text-md text-end">- Abroova 🖤 ✨</p>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+  <!-- grid end below  -->
+</div>
+  
+
+
+</section>
+
+
+
+
+
+
+<!-- footer  -->
+<footer class="bg-[#313030] max-w-full">
+
+<!-- parent div below -->
+<div class="flex flex-col items-center justify-between py-2 lg:px-20 sm:px-5 md:px-10 lg:flex-row md:flex-row">
+
+  <!-- left side content div start below -->
+
+<div class="flex">
+<p class="p-3 text-base text-[#FFF7EC]">© 2025 Copyright <a href="#" target="_blank">Instant Cafe</a>  All Rights Reserved.</p>
+
+  <!-- left div end below -->
+</div>
+
+<!-- Right side content div start below -->
+ <div class="flex gap-6 px-4 py-2 text-lg text-[#FFF7EC]">
+  <a href="#" target="_blank">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<a href="https://www.instagram.com/deva__0701/" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/deva-web/" target="_blank">
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
+
+<a href="https://github.com/deva-p-stack/" target="_blank">
+<i class="fa-brands fa-github"></i>
+</a>
+
+
+
+<p></p>
+
+  
+  <!-- right end div below -->
+ </div>
+  
+
+  <!-- parent div end below -->
+</div>
+  
+
+
+
+
+
+
+
+
+</footer>
+
+    
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
