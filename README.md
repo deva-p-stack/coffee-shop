@@ -4,11 +4,10 @@ A frontend project built using Vanilla JavaScript and Tailwind CSS v4.
 
 
 ## Wireframes
-<<<<<<< HEAD
-![Home Page](./public/home2.png)
+
 =======
 ![Home Page](./public/images/home2.png)
->>>>>>> a7b8b2bc8627965cdc83a0dfa482071cd1147c1b
+
 ---
 
 
@@ -30,11 +29,8 @@ A frontend project built using Vanilla JavaScript and Tailwind CSS v4.
 
 ### Live link:
 
-<<<<<<< HEAD
-[View Live Project](https://deva-p-stack.github.io/coffee_shop/)
-=======
 [View Live Project](https://deva-p-stack.github.io/coffee-shop/)
->>>>>>> a7b8b2bc8627965cdc83a0dfa482071cd1147c1b
+
 
 ---
 
